@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../model/post.dart';
 
-class Home extends StatelessWidget {
+class MyListView extends StatelessWidget {
   Widget _itemBuilder(BuildContext context, int index) {
     return Container(
       color: Colors.white,
@@ -20,17 +20,11 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        title: Text("ibobo"),
-        elevation: 0.0,
-      ),
-      body: ListView.builder(
+    return Container(
+      child: ListView.builder(
         itemCount: posts.length,
         itemBuilder: _itemBuilder,
       ),
     );
   }
 }
-
